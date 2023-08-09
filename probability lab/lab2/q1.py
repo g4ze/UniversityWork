@@ -3,6 +3,7 @@ import collections as colections
 import random
 print("start")
 arr=[]
+random.seed(4)
 for i in range(1500):
     arr.append((random.randint(90,100)))
 elements_count=colections.Counter(arr)
