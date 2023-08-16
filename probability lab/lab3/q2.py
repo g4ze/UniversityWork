@@ -3,5 +3,5 @@ import collections as colections
 # now we would colaculate the probability of atleast one heads in 4 coin tosses
 samplespace=2**4
 pnohead=1/samplespace
-ponehead=1-pohead
+ponehead=1-pnohead
 print(ponehead)
