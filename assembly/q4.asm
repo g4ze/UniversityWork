@@ -11,7 +11,7 @@ main:
     syscall
 
     li $v0, 8
-    la $a0, $t0
+    la $a0, input_buffer   # Load address of input_buffer
     li $a1, 100
     syscall
 
@@ -26,11 +26,6 @@ main:
     li $t2, 2023
 
     sub $t3, $t2, $t1
-    move $a0, $t3
-
-    li $v0, 4
-    move $a0, $t0
-    syscall
 
     li $v0, 4
     la $a0, output_string
@@ -46,3 +41,6 @@ main:
 
     li $v0, 10
     syscall
+
+.data
+input_buffer: .space 100
