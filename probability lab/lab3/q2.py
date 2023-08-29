@@ -15,4 +15,4 @@ for outcome in outcomes:
     head_counts[head_count] += 1
 
 for n in range(5):
-    print(f"X with {n} heads: {head_counts[n]/16}")
+    print(f"X with {n} heads: {head_counts[n]/samplespace}")
