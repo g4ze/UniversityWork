@@ -17,4 +17,4 @@ for rand_num in random_numbers:
             generated_values.append(x)
             break
 
-print(generated_values[:10])
+print(generated_values[:1500])
