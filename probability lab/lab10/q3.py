@@ -7,6 +7,7 @@ lambda_redesigned = 0.00035
 # Lifetime threshold (in hours)
 lifetime_threshold = 10000
 
+
 # Probability that the original fan will last at least 10,000 hours
 prob_original_fan = 1 - math.exp(-lambda_original * lifetime_threshold)
 

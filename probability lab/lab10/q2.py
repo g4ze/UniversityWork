@@ -1,17 +1,18 @@
 import math
 
-# Rate parameter (λ)
-lambda_param = 2
+# Parameter for the exponential distribution
+lambda_parameter = 2
+
+# Time thresholds
+threshold_1 = 3
+threshold_2 = 2
 
 # Probability that a shower will last more than three minutes
-time_threshold_1 = 3
-prob_more_than_3_minutes = 1 - math.exp(-lambda_param * time_threshold_1)
+probability_gt_3 = 1 - math.exp(-lambda_parameter * threshold_1)
 
-# Probability that a shower will last for at least one more minute given it has lasted for 2 minutes
-time_threshold_2 = 2
-prob_at_least_1_more_minute = 1 - math.exp(-lambda_param * (time_threshold_2 + 1))  # At least 2 + 1 minutes
+# Probability that a shower will last for at least one more minute, given it has already lasted for 2 minutes
+probability_gt_3_given_gt_2 = (1 - math.exp(-lambda_parameter * (threshold_1 - threshold_2)))
 
-# Output
-print("1. Probability that a shower will last more than three minutes:", prob_more_than_3_minutes)
-print("2. Probability that a shower will last for at least one more minute (given 2 minutes already passed):", prob_at_least_1_more_minute)
-
+# Display the results
+print("Probability that a shower will last more than three minutes:", probability_gt_3)
+print("Probability that a shower will last for at least one more minute, given it has already lasted for 2 minutes:", probability_gt_3_given_gt_2)
